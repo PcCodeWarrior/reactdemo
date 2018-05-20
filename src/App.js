@@ -14,38 +14,15 @@ class App extends Component {
         r: 'Right'
     };
 
-    chargeLeft = () => {
+
+    chargeVal = (val) => {
         axios.get("https://talaikis.com/api/quotes/random/ ")
             .then(response => {
-                // alert(response);
-                this.setState({l: response.data.author})
-            })
-            .catch(error =>{console.log(error);
-            });
-
-
-    };
-
-    chargeMiddle = () => {
-        axios.get("https://talaikis.com/api/quotes/random/ ")
-            .then(response => {
-                // alert(response);
-                this.setState({m: response.data.author})
+                this.setState({[val]:response.data.author})
             })
             .catch(error =>{console.log(error);
             });
     };
-
-    chargeRight = () => {
-        axios.get("https://talaikis.com/api/quotes/random/ ")
-            .then(response => {
-                // alert(response);
-                this.setState({r: response.data.author})
-            })
-            .catch(error =>{console.log(error);
-            });
-    };
-
 
 
 
@@ -53,9 +30,9 @@ render()
 {
     return (
         <div className="App">
-            <Left location={this.state.l} cv={this.chargeLeft}/>
-            <Middle location={this.state.m}  cv={this.chargeMiddle}/>
-            <Right location={this.state.r}  cv={this.chargeRight}/>
+            <Left location={this.state.l} cv={this.chargeVal}/>
+            <Middle location={this.state.m}  cv={this.chargeVal}/>
+            <Right location={this.state.r}  cv={this.chargeVal}/>
         </div>
     );
 }
