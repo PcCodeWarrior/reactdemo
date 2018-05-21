@@ -1,37 +1,35 @@
 import React, {Component} from 'react';
 import './App.css';
-import Panel from './components/Panel';
-
+import Panels from './components/Panels';
 import axios from "axios/index";
 
 
 class App extends Component {
 
-    state = {
-        l: 'Left',
-        m: 'Middle',
-        r: 'Right'
-    };
+    state = {panels: [
+            {id: 'Left', name:'Left'},
+            {id: 'Middle', name:'Middle'},
+            {id: 'Right',name:'Right'},
+            {id: 'Bottom',name:'Bottom'}
+    ]};
 
 
-    chargeVal = (val) => {
+    changeVal = (index) => {
+        const current =this.state.panels[index];
         axios.get("https://talaikis.com/api/quotes/random/ ")
             .then(response => {
-                this.setState({[val]:response.data.author})
+                current.name=response.data.author;
+                this.setState(this.state.panels);
             })
             .catch(error =>{console.log(error);
             });
     };
 
-
-
 render()
 {
     return (
         <div className="App">
-            <Panel location={this.state.l} cname={'Left'} cv={this.chargeVal}/>
-            <Panel location={this.state.m} cname={'Middle'} cv={this.chargeVal}/>
-            <Panel location={this.state.r} cname={'Right'} cv={this.chargeVal}/>
+            <Panels p={this.state.panels} cv={this.changeVal}/>
         </div>
     );
 }

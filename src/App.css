@@ -31,6 +31,16 @@
   background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
 }
 
+.Bottom {
+  width: 25%;
+  color: darkblue;
+  border: 1px solid blue;
+  margin: 5px;
+  height: 60vh;
+  background: repeating-radial-gradient(red, yellow 10%, green 15%);
+}
+
+
 .buttonFetch {
   background-color: #4CAF50; /* Green */
   border: none;
@@ -47,7 +57,7 @@
     flex-direction: column;
   }
 
-  .Left, .Right, .Middle {
+  .Left, .Right, .Middle, .Bottom {
     width: 100%;
   }
 
