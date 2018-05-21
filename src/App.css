@@ -5,12 +5,13 @@
 }
 
 .Left {
-   width: 25%;
+  width: 25%;
   height: 60vh;
-   color: red;
+  color: red;
   border: 1px solid red;
   margin: 5px;
   background: linear-gradient(yellow, red);
+
  }
 
 .Right {
@@ -23,7 +24,7 @@
 }
 
 .Middle {
-  width: 50%;
+  width: 25%;
   color: white;
   border: 1px solid blue;
   margin: 5px;
@@ -40,6 +41,13 @@
   background: repeating-radial-gradient(red, yellow 10%, green 15%);
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 
 .buttonFetch {
   background-color: #4CAF50; /* Green */
@@ -49,6 +57,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  margin: 10px;
   font-size: 16px
 }
 
