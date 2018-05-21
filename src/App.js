@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
-import Left from './components/Left';
-import Right from './components/Right';
-import Middle from './components/Middle';
+import Panel from './components/Panel';
+
 import axios from "axios/index";
 
 
@@ -30,9 +29,9 @@ render()
 {
     return (
         <div className="App">
-            <Left location={this.state.l} cv={this.chargeVal}/>
-            <Middle location={this.state.m}  cv={this.chargeVal}/>
-            <Right location={this.state.r}  cv={this.chargeVal}/>
+            <Panel location={this.state.l} cname={'Left'} cv={this.chargeVal}/>
+            <Panel location={this.state.m} cname={'Middle'} cv={this.chargeVal}/>
+            <Panel location={this.state.r} cname={'Right'} cv={this.chargeVal}/>
         </div>
     );
 }
