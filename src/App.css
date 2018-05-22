@@ -1,73 +1,72 @@
 .App {
-  display: flex;
-  text-align: center;
-  margin: 5px;
+    display: flex;
+    text-align: center;
+    margin: 5px;
 }
 
 .Left {
-  width: 25%;
-  height: 60vh;
-  color: red;
-  border: 1px solid red;
-  margin: 5px;
-  background: linear-gradient(yellow, red);
+    width: 25%;
+    height: 60vh;
+    color: red;
+    border: 1px solid red;
+    margin: 5px;
+    background: linear-gradient(yellow, red);
 
- }
+}
 
 .Right {
-  width: 25%;
-  color: green;
-  border: 1px solid green;
-  margin: 5px;
-  height: 60vh;
-  background: radial-gradient(circle, red, yellow, green);
+    width: 25%;
+    color: green;
+    border: 1px solid green;
+    margin: 5px;
+    height: 60vh;
+    background: radial-gradient(circle, red, yellow, green);
 }
 
 .Middle {
-  width: 25%;
-  color: white;
-  border: 1px solid blue;
-  margin: 5px;
-  height: 60vh;
-  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    width: 25%;
+    color: white;
+    border: 1px solid blue;
+    margin: 5px;
+    height: 60vh;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
 }
 
 .Bottom {
-  width: 25%;
-  color: darkblue;
-  border: 1px solid blue;
-  margin: 5px;
-  height: 60vh;
-  background: repeating-radial-gradient(red, yellow 10%, green 15%);
+    width: 25%;
+    color: darkblue;
+    border: 1px solid blue;
+    margin: 5px;
+    height: 60vh;
+    background: repeating-radial-gradient(red, yellow 10%, green 15%);
 }
 
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
-
 
 .buttonFetch {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 10px;
-  font-size: 16px
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    font-size: 16px
 }
 
-@media (max-width: 500px){
-  .App{
-    flex-direction: column;
-  }
+@media (max-width: 500px) {
+    .App {
+        flex-direction: column;
+    }
 
-  .Left, .Right, .Middle, .Bottom {
-    width: 100%;
-  }
+    .Left, .Right, .Middle, .Bottom {
+        width: 100%;
+    }
 
 }
